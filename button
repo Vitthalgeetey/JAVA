@@ -11,8 +11,11 @@ class button extends Frame
     f.setTitle("btn");
     f.setLayout(null);
     Button b = new Button("hello");
+    Button b2 = new Button("click here");
     b.setBounds(50,100,80,30);
+    b2.setBounds(700,100,80,30);
     f.add(b);
+    f.add(b2);
    }
    button()
    {
@@ -21,7 +24,8 @@ class button extends Frame
 {
     public void windowClosing(WindowEvent e)
     {
-        System.exit(0);
+        dispose();
+        System.out.println("EXIT");
     }
 });
 
