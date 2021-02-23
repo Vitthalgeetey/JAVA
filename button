@@ -1,0 +1,29 @@
+import java.awt.*;
+import java.awt.event.*;
+
+class button extends Frame
+{
+   public static void main(String args[])
+   {
+       button f = new button();   
+    f.setSize(1500,1500);
+    f.setVisible(true);
+    f.setTitle("btn");
+    f.setLayout(null);
+    Button b = new Button("hello");
+    b.setBounds(50,100,80,30);
+    f.add(b);
+   }
+   button()
+   {
+
+    addWindowListener(new WindowAdapter()
+{
+    public void windowClosing(WindowEvent e)
+    {
+        System.exit(0);
+    }
+});
+
+}
+    }
