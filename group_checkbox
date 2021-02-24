@@ -1,0 +1,28 @@
+import java.awt.*;
+import java.awt.event.*;
+class grpcheckbox extends Frame{
+    grpcheckbox(){
+        addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent e){
+                dispose();
+                System.out.println("BYE!!");
+            }
+        });
+    }
+    
+    public static void main(String args[]){
+    CheckboxGroup gp = new CheckboxGroup();
+    Checkbox c1 , c2;
+    c1 = new Checkbox("YES",gp,true);
+    c1.setBounds(100,100,30,20);
+    c2 = new Checkbox("NO",gp,false);
+    c2.setBounds(100,150,30,20);
+        grpcheckbox g = new grpcheckbox();
+        g.add(c1);
+        g.add(c2);
+        g.setSize(500,500);
+        g.setLayout(null);
+        g.setVisible(true);
+        g.setTitle("group checkbox"); 
+    }
+}
