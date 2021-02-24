@@ -1,0 +1,37 @@
+import java.awt.*;
+import java.awt.event.*;
+class UserDetail extends Frame{
+    UserDetail(){
+        addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent e){
+                dispose();
+                System.out.println("BYE!!");
+            }
+        });
+    }
+    public void paint(Graphics g){
+        this.setBackground(new Color(200,20,20));
+        Font f = new Font("Times New Roman",Font.BOLD,30);
+        g.setFont(f);
+        g.setColor(Color.blue);
+        g.drawString("Name: Vitthal Geetey",100,100);
+        Font f1 = new Font("Calibri",Font.BOLD,30);
+        g.setFont(f1);
+        g.drawString("Enrollment no. 191000BTIT06640",100,200);
+        g.setColor(Color.red);
+        Font f2 = new Font("Arial",Font.BOLD,30);
+        g.setFont(f2);
+        g.drawString("course: B.tech(IT)",100,300);
+        g.setColor(Color.green);
+        Font f3 = new Font("Comic Sans MS",Font.BOLD,30);
+        g.setFont(f3);
+        g.drawString("4th sem!",100,400);
+        g.setColor(Color.YELLOW);
+    }
+    public static void main(String args[]){
+    UserDetail m = new UserDetail();
+    m.setSize(1500,1500);
+    m.setTitle("UserDetail");
+    m.setVisible(true);
+    }
+}
