@@ -10,23 +10,27 @@ class UserDetail extends Frame{
         });
     }
     public void paint(Graphics g){
-        this.setBackground(new Color(200,20,20));
+        this.setBackground(new Color(100,20,20));
+        g.setColor(Color.blue);
         Font f = new Font("Times New Roman",Font.BOLD,30);
         g.setFont(f);
-        g.setColor(Color.blue);
         g.drawString("Name: Vitthal Geetey",100,100);
+        g.setColor(Color.red);
         Font f1 = new Font("Calibri",Font.BOLD,30);
         g.setFont(f1);
         g.drawString("Enrollment no. 191000BTIT06640",100,200);
-        g.setColor(Color.red);
-        Font f2 = new Font("Arial",Font.BOLD,30);
-        g.setFont(f2);
-        g.drawString("course: B.tech(IT)",100,300);
         g.setColor(Color.green);
+        Font f2 = new Font("Arial",Font.ITALIC,30);
+        g.setFont(f2);
+        g.drawString("course:",100,300);
+        g.setColor(Color.BLACK);
+        Font f4 = new Font("Clarendon Blk BT",Font.BOLD,30);
+        g.setFont(f4);
+        g.drawString("B.tech(IT)",250,300);
+        g.setColor(Color.YELLOW);
         Font f3 = new Font("Comic Sans MS",Font.BOLD,30);
         g.setFont(f3);
         g.drawString("4th sem!",100,400);
-        g.setColor(Color.YELLOW);
     }
     public static void main(String args[]){
     UserDetail m = new UserDetail();
