@@ -1,0 +1,43 @@
+import java.awt.*;
+import java.awt.event.*;
+
+class checkbox_itm extends Frame implements ItemListener{
+    Checkbox c1,c2;
+    Label label;
+    checkbox_itm(){
+        addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent e){
+                System.out.println("Exit");
+                dispose();
+            } 
+        });
+        label = new Label();
+        label.setAlignment(Label.CENTER);
+        label.setSize(400,100);
+        add(label);
+        c1 = new Checkbox("Italic");
+        c1.setBounds(100,100,50,50);
+        c1.addItemListener(this);
+        add(c1);
+        c2 = new Checkbox("gree");
+        c2.setBounds(100,150,50,50);
+        c2.addItemListener(this);
+        add(c2);
+    }
+    public void itemStateChanged(ItemEvent e){;
+        if(e.getSource()==c1)  
+            label.setText("Italic Checkbox: "     
+            + (e.getStateChange()==1?"checked":"unchecked"));   
+        if(e.getSource()==c2)  
+        label.setText("Bold Checkbox: "     
+        + (e.getStateChange()==1?"checked":"unchecked"));
+    }
+    public static void main(String args[]){
+        checkbox_itm ci = new checkbox_itm();
+        ci.setSize(400,400);
+        ci.setVisible(true);
+        ci.setTitle("Item Listener");
+        ci.setLayout(null);
+    }
+}
+  
