@@ -27,7 +27,7 @@ class checkbox_itm extends Frame implements ItemListener{
     public void itemStateChanged(ItemEvent e){;
         if(e.getSource()==c1)  
             label.setText("Italic Checkbox: "     
-            + (e.getStateChange()==1?"checked":"unchecked"));   
+            + (e.getStateChange()==1?"true":"false"));   
         if(e.getSource()==c2)  
         label.setText("Bold Checkbox: "     
         + (e.getStateChange()==1?"checked":"unchecked"));
