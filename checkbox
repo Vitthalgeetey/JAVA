@@ -7,12 +7,15 @@ class checkbox extends Frame{
         setLayout(new FlowLayout());
         c1 = new Checkbox("sahi h",true);
         c1.setBounds(220,120,60,30);
+        c1.setBackground(Color.red);
         add(c1);
         c2 = new Checkbox("not true");
         c2.setBounds(220,220,60,30);
+        c2.setBackground(Color.blue);
         add(c2);
         c3 = new Checkbox("tera bhi sahi h",true);
         c3.setBounds(220,320,110,30);
+        c3.setBackground(Color.YELLOW);
         add(c3);
         addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent e){
@@ -32,6 +35,5 @@ class checkbox extends Frame{
         c.setSize(500,500);
         c.setTitle("CHECKBOX");
         c.setVisible(true);
-        c.setLayout(null);
     }
 }
