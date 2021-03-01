@@ -2,7 +2,18 @@ import java.awt.*;
 import java.awt.event.*;
 
 class checkbox extends Frame{
+    Checkbox c1,c2,c3;
     checkbox(){
+        setLayout(new FlowLayout());
+        c1 = new Checkbox("sahi h",true);
+        c1.setBounds(220,120,60,30);
+        add(c1);
+        c2 = new Checkbox("not true");
+        c2.setBounds(220,220,60,30);
+        add(c2);
+        c3 = new Checkbox("tera bhi sahi h",true);
+        c3.setBounds(220,320,110,30);
+        add(c3);
         addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent e){
                 dispose();
@@ -10,21 +21,17 @@ class checkbox extends Frame{
             }
         });
     }
+    public void paint(Graphics g){
+        g.drawString("Item State:",15,100);
+        g.drawString("checkbox1 state: "+c1.getState(),15,150);
+        g.drawString("checkbox2 state: "+c2.getState(),15,200);
+        g.drawString("checkbox3 state: "+c3.getState(),15,250);
+    }
     public static void main(String args[]){
         checkbox c = new checkbox();
         c.setSize(500,500);
         c.setTitle("CHECKBOX");
         c.setVisible(true);
         c.setLayout(null);
-        Checkbox c1 = new Checkbox("sahi h",true);//checkbox1
-        c1.setBounds(220,120,60,30);
-        c.add(c1);
-        Checkbox c2,c3;//checbox 2 and 3
-        c2 = new Checkbox("not true");
-        c2.setBounds(220,220,60,30);
-        c.add(c2);
-        c3 = new Checkbox("tera bhi sahi h",true);
-        c3.setBounds(220,320,110,30);
-        c.add(c3);
     }
 }
